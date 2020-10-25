@@ -8,16 +8,16 @@
   text-align: center;
 }
 
-.tours .tours__sliders .tours__slider .tours__information .tours__button, header .header__main .header__button {
+.booking p .btn, .tours .tours__sliders .tours__slider .tours__information .tours__button, header .header__main .header__button {
   background-color: #d6ac3a;
   color: #000;
-  padding: 0.5vw 1.5vw;
+  padding: 0.8vw 1.5vw;
   border-radius: 20px;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }
-.tours .tours__sliders .tours__slider .tours__information .tours__button:hover, header .header__main .header__button:hover {
-  background-color: #b8a67c;
+.booking p .btn:hover, .tours .tours__sliders .tours__slider .tours__information .tours__button:hover, header .header__main .header__button:hover {
+  background-color: #efd79f;
 }
 
 * {
@@ -101,7 +101,7 @@ header .header__main h2 {
   display: flex;
 }
 .main .main__images ul li {
-  border-top: 6px solid #b8a67c;
+  border-top: 6px solid #efd79f;
   padding: 2vw 0;
 }
 .main .main__images ul li i {
@@ -116,7 +116,7 @@ header .header__main h2 {
   border-top: 6px solid #d6ac3a;
 }
 .main .main__images ul li:hover i {
-  color: #b8a67c;
+  color: #efd79f;
 }
 
 .tours {
@@ -150,7 +150,7 @@ header .header__main h2 {
   text-decoration: underline;
 }
 .tours .tours__sliders .tours__slider .tours__information .tours__program:hover {
-  color: #886e26;
+  color: #ca9500;
 }
 .tours .tours__sliders .tours__slider .tours__information .tours__button {
   width: max-content;
@@ -161,6 +161,27 @@ header .header__main h2 {
 .tours .tours__sliders .tours__slider .tours__image img {
   width: 35vw;
   height: 42vw;
+}
+
+.booking {
+  height: 15vw;
+  background-color: #d6ac3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.booking input, .booking select {
+  padding: 0.8vw 1vw;
+  margin: 2vw;
+  border: none;
+  border-radius: 2px;
+}
+.booking p {
+  display: flex;
+  justify-content: center;
+}
+.booking p .btn {
+  border: 1px solid #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
