@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
+.tours h2, .main .main__information h2 {
+  font-size: 1.5vw;
+  margin-bottom: 1.5vw;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.tours .tours__sliders .tours__slider .tours__information .tours__button, header .header__main .header__button {
+  background-color: #d6ac3a;
+  color: #000;
+  padding: 0.5vw 1.5vw;
+  border-radius: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+.tours .tours__sliders .tours__slider .tours__information .tours__button:hover, header .header__main .header__button:hover {
+  background-color: #b8a67c;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -60,55 +81,86 @@ header .header__main h2 {
   margin-bottom: 1.5vw;
   font-weight: 300;
 }
-header .header__main .header__button {
-  background-color: #d6ac3a;
-  color: #000;
-  padding: 0.5vw 1.2vw;
-  border-radius: 20px;
-}
-
-main {
+.main {
   width: 100vw;
   height: 80vh;
   padding: 5vw 20vw;
   text-align: center;
   font-family: "Raleway", sans-serif;
 }
-main .main__information h2 {
-  font-size: 1.5vw;
-  margin-bottom: 1.5vw;
-  font-weight: 500;
-  letter-spacing: 0.1vw;
-}
-main .main__information p {
+.main .main__information p {
   margin-bottom: 0.5vw;
 }
-main .main__information p span {
+.main .main__information p span {
   color: #d6ac3a;
 }
-main .main__images {
-  padding: 2vw 0;
+.main .main__images {
+  padding-top: 2vw;
 }
-main .main__images ul {
+.main .main__images ul {
   display: flex;
 }
-main .main__images ul li {
-  border-top: 6px solid #eedcb2;
+.main .main__images ul li {
+  border-top: 6px solid #b8a67c;
   padding: 2vw 0;
 }
-main .main__images ul li i {
+.main .main__images ul li i {
   font-size: 4vw;
   padding-bottom: 1vw;
 }
-main .main__images ul li h3 {
+.main .main__images ul li h3 {
   font-weight: 300;
   font-size: 1.2vw;
 }
-main .main__images ul li:hover {
+.main .main__images ul li:hover {
   border-top: 6px solid #d6ac3a;
 }
-main .main__images ul li:hover i {
-  color: #eedcb2;
+.main .main__images ul li:hover i {
+  color: #b8a67c;
+}
+
+.tours {
+  background-color: #f3f3f3;
+  padding: 2vw 10vw;
+}
+.tours .tours__sliders {
+  padding: 2vw 3vw;
+}
+.tours .tours__sliders .tours__slider {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-gap: 2vw !important;
+  align-items: center;
+}
+.tours .tours__sliders .tours__slider .tours__information {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.tours .tours__sliders .tours__slider .tours__information h3 {
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 5vw;
+  font-size: 1.5vw;
+}
+.tours .tours__sliders .tours__slider .tours__information .tours__program {
+  color: #d6ac3a;
+  padding-bottom: 2vw;
+  font-style: italic;
+  text-decoration: underline;
+}
+.tours .tours__sliders .tours__slider .tours__information .tours__program:hover {
+  color: #886e26;
+}
+.tours .tours__sliders .tours__slider .tours__information .tours__button {
+  width: max-content;
+}
+.tours .tours__sliders .tours__slider p {
+  padding-bottom: 2vw;
+}
+.tours .tours__sliders .tours__slider .tours__image img {
+  width: 35vw;
+  height: 42vw;
 }
 
 /*# sourceMappingURL=style.css.map */

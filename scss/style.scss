@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
+
 $orange-color: #d6ac3a;
-$lite_orange-color: #eedcb2;
+$lite_orange-color: #b8a67c;
+$dark-orange-color: #886e26;
+
+%h2-specifications{
+  font-size: 1.5vw;
+  margin-bottom: 1.5vw;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+%button{
+  background-color: $orange-color;
+  color: #000;
+  padding: 0.5vw 1.5vw;
+  border-radius: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  &:hover{
+    background-color: $lite_orange-color;
+  }
+}
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -58,14 +82,11 @@ header{
       font-weight: 300;
     }
     .header__button{
-      background-color: $orange-color;
-      color: #000;
-      padding: 0.5vw 1.2vw;
-      border-radius: 20px;
+      @extend %button;
     }
   }
 }
-main{
+.main{
   width: 100vw;
   height: 80vh;
   padding: 5vw 20vw;
@@ -73,10 +94,7 @@ main{
   font-family: 'Raleway', sans-serif;
   .main__information{
     h2{
-      font-size: 1.5vw;
-      margin-bottom: 1.5vw;
-      font-weight: 500;
-      letter-spacing: 0.1vw;
+      @extend %h2-specifications;
     }
     p{
       margin-bottom: 0.5vw;
@@ -86,7 +104,7 @@ main{
     }
   }
   .main__images{
-    padding: 2vw 0;
+    padding-top: 2vw;
     ul{
       display: flex;
       li{
@@ -107,9 +125,55 @@ main{
           }
         }
       }
-
     }
-
   }
-
+}
+.tours{
+  background-color: #f3f3f3;
+  padding: 2vw 10vw;
+  h2{
+    @extend %h2-specifications;
+  }
+  .tours__sliders{
+    padding: 2vw 3vw;
+    .tours__slider{
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      grid-gap: 2vw !important;
+      align-items: center;
+      .tours__information{
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        flex-direction: column;
+        h3{
+          font-weight: 400;
+          text-align: center;
+          padding-bottom: 5vw;
+          font-size: 1.5vw;
+        }
+        .tours__program{
+          color: $orange-color;
+          padding-bottom: 2vw;
+          font-style: italic;
+          text-decoration: underline;
+          &:hover{
+            color: $dark-orange-color;
+          }
+        }
+        .tours__button{
+          @extend %button;
+          width: max-content;
+        }
+      }
+      p{
+        padding-bottom: 2vw;
+      }
+      .tours__image{
+        img{
+          width: 35vw;
+          height: 42vw;
+        }
+      }
+    }
+  }
 }
