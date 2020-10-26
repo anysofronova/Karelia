@@ -245,3 +245,27 @@ header{
     }
   }
 }
+footer{
+  display: flex;
+  background-color: #252525;
+  justify-content: space-around;
+  align-items: center;
+  height: 7vw;
+  .footer__logo{
+    @extend %main-logo;
+  }
+  .footer__menu{
+    ul{
+      display: flex;
+      li{
+        padding: 1vw;
+        a:hover{
+          color: $orange-color;
+        }
+      }
+    }
+  }
+  .footer__year{
+    @extend %main-logo;
+  }
+}
