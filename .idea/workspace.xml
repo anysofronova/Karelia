@@ -4,21 +4,6 @@
     <list default="true" id="ea77a8ea-c560-402a-aeeb-222bd695d427" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/config.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/fonts/slick.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/fonts/slick.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/fonts/slick.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/fonts/slick.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/slick-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/slick-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/slick-theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/slick.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/slick.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/slick.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/slick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/slick/slick.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
@@ -87,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603633694511</updated>
-      <workItem from="1603633695604" duration="22778000" />
+      <workItem from="1603633695604" duration="23324000" />
     </task>
     <servers />
   </component>
