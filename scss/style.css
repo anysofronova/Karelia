@@ -40,6 +40,9 @@ a {
   color: #fff;
   text-decoration: none;
 }
+a:focus {
+  outline: 0;
+}
 
 header {
   background-image: url("../img/header_bg.jpg");
@@ -124,6 +127,34 @@ header .header__main h2 {
 .tours {
   background-color: #f3f3f3;
   padding: 2vw 10vw;
+  position: relative;
+  overflow: hidden;
+}
+.tours .slick-list .slick-track {
+  display: flex;
+}
+.tours .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: 0;
+  width: 5vw;
+  height: 5vw;
+  border: none;
+}
+.tours .slick-prev {
+  left: 2vw;
+  background: url("../img/arrow-back.svg") 0 0/100% no-repeat;
+}
+.tours .slick-prev:focus {
+  outline: 0;
+}
+.tours .slick-next {
+  right: 2vw;
+  background: url("../img/arrow-next.svg") 0 0/100% no-repeat;
+}
+.tours .slick-next:focus {
+  outline: 0;
 }
 .tours .tours__sliders {
   padding: 2vw 3vw;
@@ -159,9 +190,17 @@ header .header__main h2 {
 .tours .tours__sliders .tours__slider p {
   padding-bottom: 2vw;
 }
+.tours .tours__sliders .tours__slider .tours__image {
+  position: relative;
+  padding: 0 0 100% 0;
+}
 .tours .tours__sliders .tours__slider .tours__image img {
-  width: 35vw;
-  height: 42vw;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .booking {
@@ -177,12 +216,18 @@ header .header__main h2 {
   border: none;
   border-radius: 2px;
 }
+.booking input:focus, .booking select:focus {
+  outline: 0;
+}
 .booking p {
   display: flex;
   justify-content: center;
 }
 .booking p .btn {
   border: 1px solid #ffffff;
+}
+.booking p .btn:focus {
+  outline: 0;
 }
 
 .contact {
@@ -197,7 +242,6 @@ header .header__main h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
   position: absolute;
   top: 0;
   left: 0;
