@@ -11,15 +11,15 @@
     <script src="https://kit.fontawesome.com/37f26b2236.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header id="MAJOR">
         <nav>
             <div class="header__logo">KARELIA <br> TRAVEL</div>
             <div class="header__menu">
                 <ul>
-                    <li><a href="#">ГЛАВНАЯ</a></li>
-                    <li><a href="#">О НАС</a></li>
-                    <li><a href="#">НАШИ ПУТЕШЕСТВИЯ</a></li>
-                    <li><a href="#">КОНТАКТЫ</a></li>
+                    <li><a href="#MAJOR">ГЛАВНАЯ</a></li>
+                    <li><a href="#ABOUT">О НАС</a></li>
+                    <li><a href="#TOURS">НАШИ ПУТЕШЕСТВИЯ</a></li>
+                    <li><a href="#CONTACT">КОНТАКТЫ</a></li>
                 </ul>
             </div>
         </nav>
@@ -30,8 +30,8 @@
         </div>
     </header>
     <main>
-        <section class="main">
-            <div class="main__information">
+        <section class="about" id="ABOUT">
+            <div class="about__information">
                 <h2>KARELIA TRAVEL</h2>
                 <p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности
                     создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
@@ -49,7 +49,7 @@
                     собственных рациональных ограничений.
                 </p>
             </div>
-            <div class="main__images">
+            <div class="about__images">
                 <ul>
                     <li>
                         <i class="fa fa-user-circle-o"></i>
@@ -71,7 +71,7 @@
             </div>
         </section>
 
-        <section class="tours">
+        <section class="tours" id="TOURS">
             <h2>НАШИ ПУТЕШЕСТВИЯ</h2>
             <div class="tours__sliders">
                 <div class="tours__slider">
@@ -138,6 +138,40 @@
                         <img src="./img/slider_photo3.jpg" alt="yoga">
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="booking">
+            <form action="" method="post">
+                <label><select>
+                    <option value="">Выберите тур</option>
+                    <option value="Спортивный">Тур "Спортивный"</option>
+                    <option value="Йога">Тур "Йога"</option>
+                    <option value="Танцевальный">Тур "Танцевальный"</option>
+                </select></label>
+                <label><input type="text" name="name" placeholder="Имя"></label>
+                <label><input type="text" name="phone" placeholder="Телефон"></label>
+                <label><input type="text" name="email" placeholder="E-mail"></label>
+                <p><input type="submit" value="Забронировать тур" class="btn"></p>
+            </form>
+        </section>
+
+        <section class="contact" id="CONTACT">
+            <div class="contact__img">
+                <img src="./img/contact.jpg" alt="Girl in the mountains">
+            </div>
+            <div class="contact__information">
+                <h2>КОНТАКТЫ</h2>
+                <a href="tel: +79999999999">+7 (999) 999-99-99</a>
+                <a href="mailto: karekiatravel@gmail.com">karekiatravel@gmail.com</a>
+                <a href="https://yandex.ru/maps/-/CCQ~VNusWC" target="_blank">1-й Красногвардейский проезд, 19</a>
+                <h3>Социальные сети:</h3>
+                <ul class="contact__social">
+                    <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
         </section>
     </main>
