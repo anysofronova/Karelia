@@ -18,7 +18,7 @@
   background-color: #e0bb60;
 }
 
-header nav .header__logo {
+footer .footer__year, footer .footer__logo, header nav .header__logo {
   font-size: 1.5vw;
   letter-spacing: 0.1vw;
   font-weight: 600;
@@ -228,6 +228,23 @@ header .header__main h2 {
 .contact .contact__information .contact__social i {
   padding: 0.5vw 1vw;
   font-size: 2vw;
+}
+
+footer {
+  display: flex;
+  background-color: #252525;
+  justify-content: space-around;
+  align-items: center;
+  height: 7vw;
+}
+footer .footer__menu ul {
+  display: flex;
+}
+footer .footer__menu ul li {
+  padding: 1vw;
+}
+footer .footer__menu ul li a:hover {
+  color: #f5bc22;
 }
 
 /*# sourceMappingURL=style.css.map */
