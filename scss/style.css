@@ -67,8 +67,8 @@ header nav .header__menu {
 header nav .header__menu ul {
   display: flex;
 }
-header nav .header__menu ul li:not(:last-child) {
-  margin-right: 2vw;
+header nav .header__menu ul li {
+  padding: 0 1vw;
 }
 header nav .header__menu ul a:hover {
   color: #f5bc22;
@@ -164,6 +164,9 @@ header .header__main h2 {
   grid-gap: 2vw !important;
   align-items: center;
 }
+.tours .tours__sliders .tours__slider:focus {
+  outline: 0;
+}
 .tours .tours__sliders .tours__slider .tours__information {
   display: flex;
   flex-direction: column;
@@ -203,7 +206,6 @@ header .header__main h2 {
 }
 
 .booking {
-  height: 15vw;
   background-color: #f5bc22;
   display: flex;
   align-items: center;
@@ -278,7 +280,7 @@ footer {
   background-color: #252525;
   justify-content: space-around;
   align-items: center;
-  height: 7vw;
+  padding: 2vw 5vw;
 }
 footer .footer__menu ul {
   display: flex;
@@ -288,6 +290,87 @@ footer .footer__menu ul li {
 }
 footer .footer__menu ul li a:hover {
   color: #f5bc22;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  header {
+    padding: 5vw 7vw;
+  }
+  header nav .header__logo {
+    font-size: 2.5vw;
+  }
+  header nav .header__menu {
+    font-size: 2vw;
+  }
+  header nav .header__menu ul li {
+    padding: 0 1.5vw;
+  }
+  header .header__main {
+    padding: 35vw 15vw;
+  }
+  header .header__main h1 {
+    margin-bottom: 1.5vw;
+    font-size: 5vw;
+  }
+  header .header__main h2 {
+    font-size: 2.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .about {
+    padding: 5vw 10vw;
+  }
+  .about .about__information h2 {
+    font-size: 3vw;
+  }
+  .about .about__images ul li i {
+    font-size: 6vw;
+  }
+  .about .about__images ul li h3 {
+    font-size: 2vw;
+  }
+
+  .tours {
+    padding: 2vw 4vw;
+  }
+  .tours .slick-prev {
+    left: 1vw;
+  }
+  .tours .slick-next {
+    right: 1vw;
+  }
+  .tours h2 {
+    font-size: 3vw;
+  }
+  .tours .tours__sliders .tours__slider .tours__information h3 {
+    padding-bottom: 3vw;
+    font-size: 2.5vw;
+  }
+  .tours .tours__sliders .tours__slider .tours__information p {
+    font-size: 1.7vw;
+  }
+
+  .booking {
+    padding: 2vw;
+  }
+  .booking input, .booking select {
+    padding: 1vw 1.2vw;
+    margin: 1vw;
+  }
+
+  .contact .contact__information h2, .contact .contact__information h3 {
+    padding: 1.2vw;
+  }
+  .contact .contact__information .contact__social {
+    padding: 2vw 0;
+  }
+  .contact .contact__information .contact__social i {
+    padding: 0.8vw 1.3vw;
+    font-size: 3vw;
+  }
+
+  footer .footer__menu ul li {
+    padding: 1.2vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

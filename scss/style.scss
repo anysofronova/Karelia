@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
 
+//ПЕРЕМЕННЫЕ
 $orange-color: #f5bc22;
 $lite_orange-color: #e0bb60;
 $dark-orange-color: #c49102;
 
+//МИКСИНЫ
 %h2-specifications{
   font-size: 1.5vw;
   margin-bottom: 1.5vw;
@@ -28,6 +30,7 @@ $dark-orange-color: #c49102;
   color: #ffffff;
 }
 
+//ОБЩЕЕ
 *{
   box-sizing: border-box;
   margin: 0;
@@ -44,6 +47,8 @@ a{
     outline:0;
   }
 }
+
+//ОСНОВНОЕ
 header{
   background-image: url("../img/header_bg.jpg");
   background-repeat: no-repeat;
@@ -66,8 +71,8 @@ header{
       font-weight: 300;
       ul{
         display: flex;
-        li:not(:last-child) {
-          margin-right: 2vw;
+        li{
+          padding: 0 1vw;
         }
         a:hover{
           color: $orange-color;
@@ -176,6 +181,9 @@ header{
       grid-template-columns: 1fr 1fr !important;
       grid-gap: 2vw !important;
       align-items: center;
+      &:focus {
+        outline:0;
+      }
       .tours__information{
         display: flex;
         flex-direction: column;
@@ -218,7 +226,6 @@ header{
   }
 }
 .booking{
-  height: 15vw;
   background-color: $orange-color;
   display: flex;
   align-items: center;
@@ -293,7 +300,7 @@ footer{
   background-color: #252525;
   justify-content: space-around;
   align-items: center;
-  height: 7vw;
+  padding: 2vw 5vw;
   .footer__logo{
     @extend %main-logo;
   }
@@ -312,3 +319,112 @@ footer{
     @extend %main-logo;
   }
 }
+
+
+//----------------------MEDIA----------------------
+@media screen and (min-width: 480px) and (max-width: 768px){
+  header{
+    padding: 5vw 7vw;
+    nav{
+      .header__logo{
+        font-size: 2.5vw;
+      }
+      .header__menu{
+        font-size: 2vw;
+        ul{
+          li{
+            padding: 0 1.5vw;
+          }
+        }
+      }
+    }
+    .header__main{
+      padding: 35vw 15vw;
+      h1{
+        margin-bottom: 1.5vw;
+        font-size: 5vw;
+      }
+      h2{
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
+      }
+    }
+  }
+  .about{
+    padding: 5vw 10vw;
+    .about__information{
+      h2{
+        font-size: 3vw;
+      }
+    }
+    .about__images{
+      ul{
+        li{
+          i{
+            font-size: 6vw;
+          }
+          h3{
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+  }
+  .tours{
+    padding: 2vw 4vw;
+    .slick-prev{
+      left: 1vw;
+    }
+    .slick-next{
+      right: 1vw;
+    }
+    h2{
+      @extend %h2-specifications;
+      font-size: 3vw;
+    }
+    .tours__sliders{
+      .tours__slider{
+        .tours__information{
+          h3{
+            padding-bottom: 3vw;
+            font-size: 2.5vw;
+          }
+          p{
+            font-size: 1.7vw;
+          }
+        }
+      }
+    }
+  }
+  .booking{
+    padding: 2vw;
+    input, select{
+      padding: 1vw 1.2vw;
+      margin: 1vw;
+    }
+  }
+  .contact{
+    .contact__information{
+      h2, h3{
+        padding: 1.2vw;
+      }
+      .contact__social{
+        padding: 2vw 0;
+        i{
+          padding: 0.8vw 1.3vw;
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+  footer{
+    .footer__menu{
+      ul{
+        li{
+          padding: 1.2vw;
+        }
+      }
+    }
+  }
+}
+
