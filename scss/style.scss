@@ -230,27 +230,34 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  input, select{
-    padding: 0.8vw 1vw;
-    margin: 2vw;
-    border: none;
-    border-radius: 2px;
-    &:focus {
-      outline:0;
-    }
-  }
-  p{
-    display: flex;
-    justify-content: center;
-    .btn{
-      @extend %button;
-      border: 1px solid #ffffff;
+  form{
+    input, select{
+      -webkit-appearance:none;
+      padding: 0.8vw 1vw;
+      margin: 2vw;
+      border: none;
+      border-radius: 2px;
+      select{
+        padding: 0.8vw 1.1vw;
+      }
       &:focus {
         outline:0;
       }
     }
+    p{
+      display: flex;
+      justify-content: center;
+      .btn{
+        @extend %button;
+        border: 1px solid #ffffff;
+        &:focus {
+          outline:0;
+        }
+      }
+    }
   }
 }
+
 .contact{
   display: grid;
   grid-template-columns: 2fr 2fr;

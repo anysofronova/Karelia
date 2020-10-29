@@ -7,14 +7,14 @@
   text-align: center;
 }
 
-.booking p .btn, .tours .tours__sliders .tours__slider .tours__information .tours__button, header .header__main .header__button {
+.booking form p .btn, .tours .tours__sliders .tours__slider .tours__information .tours__button, header .header__main .header__button {
   background-color: #f5bc22;
   color: #000;
   padding: 0.8vw 1.5vw;
   border-radius: 20px;
   font-weight: 400;
 }
-.booking p .btn:hover, .tours .tours__sliders .tours__slider .tours__information .tours__button:hover, header .header__main .header__button:hover {
+.booking form p .btn:hover, .tours .tours__sliders .tours__slider .tours__information .tours__button:hover, header .header__main .header__button:hover {
   background-color: #e0bb60;
 }
 
@@ -211,23 +211,27 @@ header .header__main h2 {
   align-items: center;
   justify-content: center;
 }
-.booking input, .booking select {
+.booking form input, .booking form select {
+  -webkit-appearance: none;
   padding: 0.8vw 1vw;
   margin: 2vw;
   border: none;
   border-radius: 2px;
 }
-.booking input:focus, .booking select:focus {
+.booking form input select, .booking form select select {
+  padding: 0.8vw 1.1vw;
+}
+.booking form input:focus, .booking form select:focus {
   outline: 0;
 }
-.booking p {
+.booking form p {
   display: flex;
   justify-content: center;
 }
-.booking p .btn {
+.booking form p .btn {
   border: 1px solid #ffffff;
 }
-.booking p .btn:focus {
+.booking form p .btn:focus {
   outline: 0;
 }
 
