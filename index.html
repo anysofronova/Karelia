@@ -8,20 +8,32 @@
 <!--    <link rel="stylesheet" href="./libs/slick/slick.css">-->
 <!--    <link rel="stylesheet" href="./libs/slick/slick-theme.css">-->
     <!--FontAwesome-->
-    <script src="https://kit.fontawesome.com/37f26b2236.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <header id="MAJOR">
-        <nav>
-            <div class="header__logo">KARELIA <br> TRAVEL</div>
-            <div class="header__menu">
-                <ul>
-                    <li><a href="#MAJOR">ГЛАВНАЯ</a></li>
-                    <li><a href="#ABOUT">О НАС</a></li>
-                    <li><a href="#TOURS">НАШИ ПУТЕШЕСТВИЯ</a></li>
-                    <li><a href="#CONTACT">КОНТАКТЫ</a></li>
+        <nav class="nav">
+            <div class="nav__logo">KARELIA <br> TRAVEL</div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#MAJOR" class="nav__link">ГЛАВНАЯ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#ABOUT" class="nav__link">О НАС</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#TOURS" class="nav__link">НАШИ ПУТЕШЕСТВИЯ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#CONTACT" class="nav__link">КОНТАКТЫ</a>
+                    </li>
                 </ul>
+                <i class="ri-close-line nav__close" id="nav-close"></i>
             </div>
+            <div class="nav__toggle" id="nav-toggle">
+				<i class="ri-menu-3-fill"></i>
+			</div>
         </nav>
         <div class="header__main">
             <h1>НЕВЕРОЯТНАЯ КАРЕЛИЯ</h1>
@@ -49,19 +61,19 @@
             <div class="about__images">
                 <ul>
                     <li>
-                        <i class="fa fa-user-circle-o"></i>
+                        <i class="ri-user-3-fill"></i>
                         <h3>Окрестности Тулы оросил треск разлетающихся скреп</h3>
                     </li>
                     <li>
-                        <i class="fa fa-compass"></i>
+                        <i class="ri-compass-3-line"></i>
                         <h3>Современная методология разработки разочаровала</h3>
                     </li>
                     <li>
-                        <i class="fa fa-plane"></i>
+                        <i class="ri-flight-takeoff-fill"></i>
                         <h3>Нет звука приятнее, чем глас грядущего поколения</h3>
                     </li>
                     <li>
-                        <i class="fa fa-sun-o"></i>
+                        <i class="ri-sun-line"></i>
                         <h3>Курс ценных бумаг стал нашим флагом в борьбе с ложью</h3>
                     </li>
                 </ul>
@@ -136,17 +148,17 @@
         </section>
 
         <section class="booking" id="BOOKING">
-            <form action="" method="post">
-                <label><select>
+            <form action="" method="post" class="booking__form">
+                <label class="booking_select"><select>
                     <option value="">Выберите тур</option>
                     <option value="Спортивный">Тур "Спортивный"</option>
                     <option value="Йога">Тур "Йога"</option>
                     <option value="Танцевальный">Тур "Танцевальный"</option>
                 </select></label>
-                <label><input type="text" name="name" placeholder="Имя"></label>
-                <label><input type="text" name="phone" placeholder="Телефон"></label>
-                <label><input type="text" name="email" placeholder="E-mail"></label>
-                <p><input type="submit" value="Забронировать тур" class="btn"></p>
+                <label class="booking__name"><input type="text" name="name" placeholder="Имя"></label>
+                <label class="booking__phone"><input type="text" name="phone" placeholder="Телефон"></label>
+                <label class="booking__email"><input type="text" name="email" placeholder="E-mail"></label>
+                <p class="booking__btn"><input type="submit" value="Забронировать тур" class="btn"></p>
             </form>
         </section>
 
@@ -161,17 +173,25 @@
                 <a href="https://yandex.ru/maps/-/CCQ~VNusWC" target="_blank">1-й Красногвардейский проезд, 19</a>
                 <h3>Социальные сети:</h3>
                 <ul class="contact__social">
-                    <li><a href="https://plus.google.com" target="_blank">
-                        <i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <li>
+                        <a href="https://plus.google.com" target="_blank">
+                            <i class="ri-google-fill"></i>
+                        </a>
                     </li>
-                    <li><a href="https://www.instagram.com" target="_blank">
-                        <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <li>    
+                        <a href="https://www.instagram.com" target="_blank">
+                            <i class="ri-instagram-line"></i>
+                        </a>
                     </li>
-                    <li><a href="https://www.facebook.com" target="_blank">
-                        <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
                     </li>
-                    <li><a href="https://twitter.com" target="_blank">
-                        <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <li>
+                        <a href="https://twitter.com" target="_blank">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -187,11 +207,11 @@
                 <li><a href="#CONTACT">КОНТАКТЫ</a></li>
             </ul>
         </div>
-        <div class="footer__year">2020</div>
+        <div class="footer__year">2021</div>
     </footer>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
