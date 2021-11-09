@@ -1,24 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
-.tours h2, .about .about__information h2 {
-  font-size: 1.5vw;
+.about .about__information h2, .tours h2 {
+  font-size: 3vw;
   margin-bottom: 1.5vw;
   font-weight: 500;
   letter-spacing: 0.1vw;
   text-align: center;
 }
 
-.booking p .btn, .tours .tours__sliders .tours__slider .tours__information .tours__button, header .header__main .header__button {
+header .header__main .header__button, .tours .tours__sliders .tours__slider .tours__information .tours__button, .booking p .btn {
   background-color: #f5bc22;
   color: #000;
   padding: 0.8vw 1.5vw;
   border-radius: 20px;
   font-weight: 400;
 }
-.booking p .btn:hover, .tours .tours__sliders .tours__slider .tours__information .tours__button:hover, header .header__main .header__button:hover {
+
+header .header__main .header__button:hover, .tours .tours__sliders .tours__slider .tours__information .tours__button:hover, .booking p .btn:hover {
   background-color: #e0bb60;
 }
 
-footer .footer__year, footer .footer__logo, header nav .header__logo {
+header .nav .nav__logo, footer .footer__logo, footer .footer__year {
   font-size: 1.5vw;
   letter-spacing: 0.1vw;
   font-weight: 600;
@@ -26,10 +27,11 @@ footer .footer__year, footer .footer__logo, header nav .header__logo {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 li {
@@ -40,6 +42,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
+
 a:focus {
   outline: 0;
 }
@@ -54,71 +57,129 @@ header {
   width: 100vw;
   height: 100vh;
 }
-header nav {
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-header nav .header__menu {
+
+header .nav .nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.2vw;
   font-weight: 300;
 }
-header nav .header__menu ul {
+
+header .nav .nav__menu .nav__close {
+  display: none;
+}
+
+header .nav .nav__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-header nav .header__menu ul li {
+
+header .nav .nav__menu ul li {
   padding: 0 1vw;
 }
-header nav .header__menu ul a:hover {
+
+header .nav .nav__menu ul a:hover {
   color: #f5bc22;
 }
-header .header__main {
-  padding: 17vw 15vw;
-  text-align: center;
+
+header .nav .nav__toggle {
+  display: none;
 }
+
+header .header__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+}
+
 header .header__main h1 {
   margin-bottom: 1vw;
   font-size: 3vw;
   font-weight: 400;
 }
+
 header .header__main h2 {
   font-size: 1.5vw;
   margin-bottom: 1.5vw;
   font-weight: 300;
 }
+
 .about {
   width: 100vw;
   padding: 5vw 20vw;
   text-align: center;
 }
+
 .about .about__information p {
   margin-bottom: 0.5vw;
 }
+
 .about .about__information p span {
   color: #f5bc22;
 }
+
 .about .about__images {
   padding-top: 2vw;
 }
+
 .about .about__images ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .about .about__images ul li {
   border-top: 6px solid #e0bb60;
   padding: 2vw 0;
 }
+
 .about .about__images ul li i {
   font-size: 4vw;
   padding-bottom: 1vw;
 }
+
+.about .about__images ul li .plane {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .about .about__images ul li h3 {
   font-weight: 300;
   font-size: 1.2vw;
 }
+
 .about .about__images ul li:hover {
   border-top: 6px solid #f5bc22;
 }
+
 .about .about__images ul li:hover i {
   color: #e0bb60;
 }
@@ -128,10 +189,15 @@ header .header__main h2 {
   padding: 2vw 10vw;
   position: relative;
   overflow: hidden;
+  height: auto;
 }
+
 .tours .slick-list .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .tours .slick-arrow {
   position: absolute;
   top: 50%;
@@ -141,236 +207,535 @@ header .header__main h2 {
   height: 5vw;
   border: none;
 }
+
 .tours .slick-prev {
   left: 2vw;
   background: url("../img/arrow-back.svg") 0 0/100% no-repeat;
 }
+
 .tours .slick-prev:focus {
   outline: 0;
 }
+
 .tours .slick-next {
   right: 2vw;
   background: url("../img/arrow-next.svg") 0 0/100% no-repeat;
 }
+
 .tours .slick-next:focus {
   outline: 0;
 }
+
 .tours .tours__sliders {
   padding: 2vw 3vw;
 }
+
 .tours .tours__sliders .tours__slider {
+  display: -ms-grid !important;
   display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
+  -ms-grid-columns: 1fr 1fr !important;
+      grid-template-columns: 1fr 1fr !important;
   grid-gap: 2vw !important;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .tours .tours__sliders .tours__slider:focus {
   outline: 0;
 }
+
 .tours .tours__sliders .tours__slider .tours__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .tours .tours__sliders .tours__slider .tours__information h3 {
   font-weight: 400;
   text-align: center;
   padding-bottom: 5vw;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
+
 .tours .tours__sliders .tours__slider .tours__information .tours__program {
   color: #f5bc22;
   padding-bottom: 2vw;
   font-style: italic;
   text-decoration: underline;
 }
+
 .tours .tours__sliders .tours__slider .tours__information .tours__program:hover {
   color: #c49102;
 }
+
 .tours .tours__sliders .tours__slider .tours__information .tours__button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
+
 .tours .tours__sliders .tours__slider p {
   padding-bottom: 2vw;
 }
+
 .tours .tours__sliders .tours__slider .tours__image {
   position: relative;
   padding: 0 0 100% 0;
 }
+
 .tours .tours__sliders .tours__slider .tours__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .booking {
-  background-color: #f5bc22;
+  background-color: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .booking input, .booking select {
-  padding: 0.8vw 1vw;
+  padding: 0.8vw 1.3vw;
   margin: 2vw;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
+  background-color: #f5bc22;
+  color: #000;
 }
+
 .booking input:focus, .booking select:focus {
   outline: 0;
 }
+
 .booking p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.booking p .btn {
-  border: 1px solid #ffffff;
-}
+
 .booking p .btn:focus {
   outline: 0;
 }
 
 .contact {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  -ms-grid-columns: 2fr 2fr;
+      grid-template-columns: 2fr 2fr;
 }
+
 .contact .contact__img {
   position: relative;
   padding: 0 0 58% 0;
 }
+
 .contact .contact__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .contact .contact__information {
   background-color: #445159;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-content: space-around;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 300;
+  padding-bottom: 2vw;
 }
+
 .contact .contact__information h2, .contact .contact__information h3 {
   padding: 1.5vw;
 }
+
 .contact .contact__information a {
   padding: 1vw;
 }
+
 .contact .contact__information a:hover {
   color: #f5bc22;
 }
+
 .contact .contact__information .contact__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
+
 .contact .contact__information .contact__social i {
   padding: 0.5vw 1vw;
   font-size: 2vw;
 }
 
+.contact .contact__information .contact__social a {
+  padding: 0;
+}
+
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #252525;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2vw 5vw;
 }
+
 footer .footer__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 footer .footer__menu ul li {
   padding: 1vw;
 }
+
 footer .footer__menu ul li a:hover {
   color: #f5bc22;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  header {
-    padding: 5vw 7vw;
-  }
+
+@media screen and (min-width: 1000px) {
   header nav .header__logo {
-    font-size: 2.5vw;
-  }
-  header nav .header__menu {
     font-size: 2vw;
   }
-  header nav .header__menu ul li {
-    padding: 0 1.5vw;
-  }
-  header .header__main {
-    padding: 35vw 15vw;
+  header nav li a {
+    font-size: 1.8vw;
   }
   header .header__main h1 {
-    margin-bottom: 1.5vw;
-    font-size: 5vw;
+    font-size: 3vw;
   }
   header .header__main h2 {
-    font-size: 2.5vw;
-    margin-bottom: 2vw;
-  }
-
-  .about {
-    padding: 5vw 10vw;
-  }
-  .about .about__information h2 {
-    font-size: 3vw;
-  }
-  .about .about__images ul li i {
-    font-size: 6vw;
-  }
-  .about .about__images ul li h3 {
     font-size: 2vw;
   }
-
-  .tours {
-    padding: 2vw 4vw;
+  header .header__main .header__button {
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
   }
-  .tours .slick-prev {
-    left: 1vw;
+  main .about {
+    padding: 10vh 10vw;
   }
-  .tours .slick-next {
-    right: 1vw;
+  main .about h2 {
+    font-size: 2vw;
   }
-  .tours h2 {
-    font-size: 3vw;
+  main .about p {
+    font-size: 1.2vw;
   }
-  .tours .tours__sliders .tours__slider .tours__information h3 {
-    padding-bottom: 3vw;
-    font-size: 2.5vw;
-  }
-  .tours .tours__sliders .tours__slider .tours__information p {
-    font-size: 1.7vw;
-  }
-
-  .booking {
-    padding: 2vw;
-  }
-  .booking input, .booking select {
-    padding: 1vw 1.2vw;
-    margin: 1vw;
-  }
-
-  .contact .contact__information h2, .contact .contact__information h3 {
-    padding: 1.2vw;
-  }
-  .contact .contact__information .contact__social {
-    padding: 2vw 0;
-  }
-  .contact .contact__information .contact__social i {
-    padding: 0.8vw 1.3vw;
-    font-size: 3vw;
-  }
-
-  footer .footer__menu ul li {
-    padding: 1.2vw;
+  main .contact .contact__information a {
+    font-size: 2vw;
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  header {
+    padding: 4vh 8vw;
+  }
+  header nav .header__logo {
+    font-size: 2vw;
+  }
+  header nav li a {
+    font-size: 2vw;
+  }
+  header .header__main h1 {
+    font-size: 3vw;
+  }
+  header .header__main h2 {
+    font-size: 2vw;
+  }
+  header .header__main .header__button {
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
+  }
+  main .about {
+    padding: 4vh 10vw;
+  }
+  main .about .about__information h2 {
+    font-size: 3vh;
+  }
+  main .about .about__images li i {
+    font-size: 7vh;
+  }
+  main .about .about__images li h3 {
+    font-size: 1.2vh;
+  }
+  main .tours {
+    padding: 7vh 7vw 2vh 7vw;
+    height: auto;
+  }
+  main .tours .tours__sliders .tours__slider .tours__information h3 {
+    font-size: 2.2vh;
+  }
+  main .booking {
+    padding-bottom: 4vh;
+  }
+  main .booking .booking__form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    grid-column-gap: 10px;
+        grid-template-areas: "select namee" "phone email" "btn btn";
+  }
+  main .booking .booking__form .booking_select {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: select;
+  }
+  main .booking .booking__form .booking__name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: namee;
+  }
+  main .booking .booking__form .booking__phone {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: phone;
+  }
+  main .booking .booking__form .booking__email {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: email;
+  }
+  main .booking .booking__form .booking__btn {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: btn;
+  }
+  main .booking .booking__form select, main .booking .booking__form input {
+    font-size: 2.5vw;
+    padding: 1vh 2vw;
+  }
+  footer .footer__logo {
+    font-size: 2vw;
+  }
+  footer .footer__menu {
+    font-size: 1.5vw;
+  }
+  footer .footer__year {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    overflow: hidden;
+    padding: 7vh 10vw;
+  }
+  header .nav .nav__logo {
+    font-size: 4vw;
+  }
+  header .nav .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background-color: #fff;
+    z-index: 100;
+  }
+  header .nav .nav__menu .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 40%;
+  }
+  header .nav .nav__menu .nav__list .nav__item {
+    padding: 3vw 2vw;
+  }
+  header .nav .nav__menu .nav__list .nav__item a {
+    color: #000;
+    font-size: 4vw;
+  }
+  header .nav .nav__menu .nav__close {
+    display: block;
+    position: absolute;
+    top: 7%;
+    right: 10%;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  header .nav .nav__toggle {
+    position: fixed;
+    display: block;
+    top: 7%;
+    right: 10%;
+    z-index: 999;
+  }
+  header .nav .nav__toggle i {
+    font-size: 1.5rem;
+  }
+  header .nav .show-menu {
+    right: 0% !important;
+    color: #000;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 1000;
+  }
+  header .header__main h1 {
+    font-size: 4vh;
+  }
+  header .header__main h2 {
+    font-size: 1.8vh;
+  }
+  header .header__main .header__button {
+    padding: 1vh 2vw;
+    font-size: 2vh;
+  }
+  main .about {
+    padding: 2vh 5vw;
+  }
+  main .about .about__information h2 {
+    font-size: 3vh;
+    margin-bottom: 3vh;
+  }
+  main .about .about__information p {
+    font-size: 2vh;
+  }
+  main .about .about__images ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+  main .about .about__images ul li i {
+    font-size: 3.5vh;
+  }
+  main .about .about__images ul li h3 {
+    font-size: 2.2vh;
+  }
+  main .tours {
+    height: auto;
+    padding: 3vh 10vw;
+  }
+  main .tours h2 {
+    font-size: 3vh;
+  }
+  main .tours .tours__sliders .tours__slider .tours__information {
+    width: 80vw;
+  }
+  main .tours .tours__sliders .tours__slider .tours__information h3 {
+    font-size: 3vh;
+  }
+  main .tours .tours__sliders .tours__slider .tours__information p {
+    font-size: 1.9vh;
+  }
+  main .tours .tours__sliders .tours__slider .tours__information .tours__program {
+    font-size: 2vh;
+  }
+  main .tours .tours__sliders .tours__slider .tours__information .tours__button {
+    font-size: 2vh;
+    padding: 1vh 2vw;
+  }
+  main .tours .tours__sliders .tours__slider .tours__image {
+    display: none;
+  }
+  main .booking {
+    padding: 2vh 5vw;
+  }
+  main .booking .booking__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .booking .booking__form select, main .booking .booking__form input {
+    font-size: 2vh;
+    padding: 1.5vh 4vw;
+  }
+  main .contact {
+    display: block;
+  }
+  main .contact .contact__img {
+    display: none;
+  }
+  main .contact .contact__information {
+    padding: 3vh 0;
+  }
+  main .contact .contact__information .contact__social {
+    padding: 2vh 2vw;
+  }
+  main .contact .contact__information .contact__social a i {
+    font-size: 3vh;
+    padding: 0 2vw;
+  }
+  footer .footer__logo {
+    font-size: 3vw;
+  }
+  footer .footer__menu {
+    font-size: 2vw;
+  }
+  footer .footer__year {
+    font-size: 2vw;
+  }
+}
 /*# sourceMappingURL=style.css.map */
