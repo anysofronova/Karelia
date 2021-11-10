@@ -37,7 +37,7 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-// ===================== Change mmenu color =====================
+// ===================== Change menu color =====================
 let toggle = document.getElementById('nav-toggle');
 window.addEventListener('scroll', function(e) {
     let last_known_scroll_position = window.scrollY;
@@ -48,3 +48,12 @@ window.addEventListener('scroll', function(e) {
     }
 });
   
+$('a[href^="#"').on('click', function() {
+
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    });
+    return false;
+});
